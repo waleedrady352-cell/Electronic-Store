@@ -14,3 +14,13 @@
         border-bottom: 2px solid blue;
 }
  /* end navbar */
+
+
+ /* start footer */
+ .footer{
+    text-align:center;
+    background-color:burlywood;
+    padding: 50px 10px;
+ } 
+
+ /* end footer */
