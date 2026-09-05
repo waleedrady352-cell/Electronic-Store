@@ -1,0 +1,14 @@
+/* start section */
+.hero{
+    height: 100vh;
+
+    background-image: url("https://wzdco.com/img/hero-electronics.jpg");
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+/* end section */
