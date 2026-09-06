@@ -12,3 +12,19 @@
 }
 
 /* end section */
+/*start navbar  */
+.navbar-brand {
+    color: blue !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: blue;
+        border-bottom: 2px solid blue;
+}
+ /* end navbar */
