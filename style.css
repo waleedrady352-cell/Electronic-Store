@@ -28,3 +28,78 @@
         border-bottom: 2px solid blue;
 }
  /* end navbar */
+ /* start section 2  */
+
+/* ================= PRODUCT SECTION ================= */
+
+.product-section {
+    background-color: #0b0b0b;
+    padding: 70px 0;
+    color: white;
+}
+
+
+/* Title */
+
+.products-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* Product Card */
+
+.product-card {
+    position: relative;
+
+    background-color: #1a1a1a;
+
+    border: 1px solid #292929;
+
+    border-radius: 15px;
+
+    padding: 28px 20px 22px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+/* Card Hover */
+
+.product-card:hover {
+    transform: translateY(-5px);
+    /* border-color: #e2b82d; */
+    border-color: blue;
+}
+
+
+/* Product Image */
+
+.product-card img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+
+/* Product Name */
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 5px 0 12px;
+}
+
+
+/* New Price */
+
+.new-price {
+    color:blue;
+}
+
