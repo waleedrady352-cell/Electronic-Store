@@ -70,7 +70,8 @@
 
 .product-card:hover {
     transform: translateY(-5px);
-    border-color: #e2b82d;
+    /* border-color: #e2b82d; */
+    border-color: blue;
 }
 
 
@@ -99,6 +100,6 @@
 /* New Price */
 
 .new-price {
-    color: #e2b82d;
+    color:blue;
 }
 
