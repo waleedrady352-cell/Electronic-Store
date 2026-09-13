@@ -161,3 +161,28 @@ body {
     font-size: 20px;
     color: blue;
 }
+
+
+/* start  validation */
+
+#validation {
+    text-align: center;
+    margin: 50px auto;
+}
+
+#validation input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+}
+
+#validation button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* end validation */
