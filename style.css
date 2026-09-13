@@ -33,9 +33,10 @@
 /* ================= PRODUCT SECTION ================= */
 
 .product-section {
-    background-color: #0b0b0b;
+    background-color: var(--section-bg);
     padding: 70px 0;
-    color: white;
+    color: var(--text-color);
+    transition: all .3s ease-in-out;
 }
 
 
@@ -103,3 +104,60 @@
     color:blue;
 }
 
+/* ================= LIGHT / DARK MODE ================= */
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --nav-bg: white;
+    --section-bg: #f5f5f5;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: white;
+    --nav-bg: #1e1e1e;
+    --section-bg: #0b0b0b;
+}
+
+
+/* Body */
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: all .3s ease-in-out !important;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--nav-bg) !important;
+    transition: all .3s ease-in-out !important;
+}
+
+
+/* Navbar Links */
+
+.nav-link {
+    color: var(--text-color) !important;
+    transition: all .3s ease-in-out !important;
+}
+
+
+/* Navbar Link Hover */
+
+.nav-link:hover {
+    color: blue !important;
+    border-bottom: 2px solid blue;
+}
+
+
+/* Theme Icon */
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    color: blue;
+}

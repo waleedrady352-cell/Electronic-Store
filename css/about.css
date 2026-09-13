@@ -1,0 +1,256 @@
+/* ================= GENERAL ================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #090909;
+    color: white;
+}
+
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+    padding: 80px 0;
+    background-color: #090909;
+}
+
+
+/* ================= IMAGE ================= */
+
+.about-image {
+    height: 600px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ================= SMALL TITLE ================= */
+
+.about-small-title {
+    color: #4b2de2;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+/* ================= MAIN TITLE ================= */
+
+.about-title {
+    font-size: 55px;
+    line-height: 1.1;
+    font-family: Georgia, serif;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.about-title span {
+    color: blue;
+    font-style: italic;
+}
+
+
+/* ================= TEXT ================= */
+
+.about-text {
+    color: #aaa;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* ================= STATISTICS ================= */
+
+.stats {
+    margin-top: 40px;
+}
+
+.stat-box {
+    border-left: 2px solid blue;
+    padding-left: 20px;
+}
+
+.stat-box h2 {
+    color: blue;
+    font-family: Georgia, serif;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    margin-top: 90px;
+    padding-top: 50px;
+    border-top: 1px solid #292929;
+}
+
+.feature-box {
+    padding: 20px;
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #5c07ed;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: blue;
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.feature-box h4 {
+    font-family: Georgia, serif;
+    margin-bottom: 12px;
+}
+
+.feature-box p {
+    color: #888;
+    line-height: 1.6;
+}
+
+
+/* ================= MISSION ================= */
+
+.mission {
+    margin-top: 100px;
+    padding-top: 80px;
+    border-top: 1px solid #292929;
+}
+
+.mission-title {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.mission-title span {
+    color: blue;
+    font-style: italic;
+}
+
+
+/* ================= MISSION CARD ================= */
+
+.mission-card {
+    min-height: 300px;
+    border: 1px solid #333;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #0d0d0d;
+}
+
+.mission-card i {
+    color: blue;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.mission-card h3 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+}
+
+.mission-card p {
+    color: #888;
+    margin-top: 15px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #292929;
+    background-color: #050505;
+}
+
+.footer p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .about-title {
+        font-size: 45px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .features {
+        margin-top: 60px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .about-section {
+        padding: 50px 20px;
+    }
+
+    .about-title {
+        font-size: 38px;
+    }
+
+    .mission-title {
+        font-size: 32px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+}
+
+
+/*start navbar  */
+.navbar-brand {
+    color: blue !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: blue;
+        border-bottom: 2px solid blue;
+}
+ /* end navbar */
