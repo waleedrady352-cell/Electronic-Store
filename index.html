@@ -36,9 +36,34 @@ TechMart
 </ul>
                
 
-<a class="nav-link active align-items-center mx-auto d-flex" href="#">cart</a> 
+<a class="nav-link active align-items-center mx-auto d-flex" href="#">cart</a>
+</nav>
                     
 <!-- end navbar -->
+
+
+
+<!-- start validation -->
+
+
+    <!-- Validation / Order Form -->
+    <section id="validation">
+        <form onsubmit="return validateForm()">
+
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <input type="text" id="phone" placeholder="Enter phone number">
+
+            <button type="submit">Buy Now</button>
+
+        </form>
+    </section>
+
+
+    
+ <!-- end validation -->
 
 
 
@@ -47,6 +72,12 @@ TechMart
     <p>&copy; 2026 TechMart Electronics</p>
 </footer>
 <!-- end footer-->  
+
+
+
+<script src="index.js"></script>
+
+
 
 </body>
 </html>

@@ -16,11 +16,52 @@
  /* end navbar */
 
 
+
+ /* start validation */
+#validation {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#validation form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#validation input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#validation button {
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#validation button:hover {
+    background-color: #0b5ed7;
+}
+  /* end validation */
+
+
+
  /* start footer */
  .footer{
     text-align:center;
     background-color:burlywood;
     padding: 50px 10px;
+    margin-top:400px; 
  } 
 
  /* end footer */
