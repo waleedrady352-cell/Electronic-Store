@@ -20,30 +20,37 @@
 <body>
 
     <!-- start navbar -->
-<nav class="navbar navbar-expand-lg bg-white  position-sticky top-0 start-0 end-0 shadow-sm ">
-
-<div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-TechMart 
-</a>
-<ul class ="nav-links d-flex align-items-center  mx-auto  gap-4">
-     <li class="nav-item">
-                       <a class="nav-link active" href="#home">Home</a> </li>
-                   
-                    <a class="nav-link active" href="#product">products</a> </li>
-                    <a class="nav-link active" href="#">servies</a> </li>
-                  
-                    <a class="nav-link active" href="html/about.html">about</a> </li>
-</ul>
-               
-<!-- n -->
-<a class="nav-link active align-items-center mx-auto d-flex" href="#">cart</a> 
-<i class="bi bi-moon-fill theme-toggle"
-   id="theme-toggle"
-   onclick="theme()"></i>
-   <!-- n -->
-</div>
-</nav>
+<nav class="navbar navbar-expand-lg bg-white shadow-sm"> 
+    <div class="container">
+         <!-- Logo -->
+           <a class="navbar-brand" href="#"> TechMart </a>
+           <!-- 3 شرط -->
+             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                 <span class="navbar-toggler-icon"></span> </button> 
+                 <!-- Menu -->
+                   <div class="collapse navbar-collapse" id="menu">
+                     <ul class="navbar-nav mx-auto"> <li class="nav-item">
+                         <a class="nav-link" href="../index.html">Home</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="#product">Products</a> 
+                        </li>
+                         <li class="nav-item"> <a class="nav-link" href="#">Services</a></li>
+                        
+                         <li class="nav-item"> 
+                            <a class="nav-link" href="html/about.html">About</a>
+                         </li> 
+                         
+                         <li class="nav-item"> 
+                            <a class="nav-link" href="#">Cart 🛒</a> 
+                            
+                            
+                        </li>
+                     </ul>
+                     <i class="bi bi-moon-fill theme-toggle" id="theme-toggle" onclick="theme()"> </i>
+                     </div> 
+                    </div>
+                 </nav>
 <!-- end navbar -->
 
 <!-- start section -->
