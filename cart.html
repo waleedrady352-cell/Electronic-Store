@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart - TechMart</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- Cart CSS -->
+
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+    <div class="container">
+
+        <!-- Logo -->
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            TechMart
+        </a>
+
+
+        <!-- Menu -->
+
+        <div class="navbar-nav ms-auto">
+
+            <a class="nav-link" href="index.html">
+                Home
+            </a>
+
+            <a class="nav-link active" href="cart.html">
+                <i class="bi bi-cart3"></i>
+                Cart
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================================
+     CART SECTION
+========================================== -->
+
+<section class="cart-section">
+
+    <div class="container">
+
+
+        <!-- Page Title -->
+
+        <div class="text-center mb-5">
+
+            <h1 class="fw-bold">
+                Shopping Cart
+            </h1>
+
+            <p class="text-secondary">
+                Review your products before checkout
+            </p>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- ==================================
+                 PRODUCTS
+            ================================== -->
+
+            <div class="col-lg-8">
+
+                <div class="cart-container">
+
+                    <div id="cart-items">
+
+                        <!-- Products will appear here -->
+
+                    </div>
+
+
+                    <!-- Empty Cart -->
+
+                    <div id="empty-cart" class="text-center">
+
+                        <i class="bi bi-cart-x empty-icon"></i>
+
+                        <h3>
+                            Your cart is empty
+                        </h3>
+
+                        <p class="text-secondary">
+                            You haven't added any products yet.
+                        </p>
+
+                        <a href="index.html#product"
+                           class="btn btn-primary">
+
+                            Continue Shopping
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 ORDER SUMMARY
+            ================================== -->
+
+            <div class="col-lg-4">
+
+                <div class="summary-card">
+
+                    <h3 class="fw-bold mb-4">
+                        Order Summary
+                    </h3>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span id="subtotal">
+                            $0
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            Shipping
+                        </span>
+
+                        <span>
+                            $0
+                        </span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <span id="total">
+                            $0
+                        </span>
+
+                    </div>
+
+
+<button class="btn btn-primary checkout-btn" onclick="showCheckout()">
+
+                        <i class="bi bi-credit-card"></i>
+
+                        Proceed to Checkout
+
+                    </button>
+
+
+                    <a href="index.html#product"
+                       class="continue-shopping">
+
+                        ← Continue Shopping
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+<!-- CHECKOUT MENU -->
+<div id="checkout-menu" class="checkout-menu">
+
+    <h2>Checkout</h2>
+
+    <p>Choose your payment method</p>
+
+    <!-- Visa -->
+    <div class="payment-option" onclick="showPayment('visa')">
+        <i class="bi bi-credit-card"></i>
+        <span>Pay with Visa</span>
+    </div>
+
+    <!-- Visa Content -->
+    <div id="visa-content" class="payment-content">
+        <h3>Coming Soon</h3>
+        <p>Visa payment will be available soon.</p>
+    </div>
+
+
+    <!-- Cash -->
+    <div class="payment-option" onclick="showPayment('cash')">
+        <i class="bi bi-cash-stack"></i>
+        <span>Cash on Delivery</span>
+    </div>
+
+    <!-- Cash Content -->
+    <div id="cash-content" class="payment-content">
+
+        <h3>Delivery Information</h3>
+
+        <input type="text" id="customer-name" placeholder="Full Name">
+
+        <input type="tel" id="customer-phone" placeholder="Mobile Number">
+
+        <textarea id="customer-address" placeholder="Address"></textarea>
+
+        <button onclick="confirmOrder()">
+            Confirm Order
+        </button>
+
+    </div>
+
+</div>
+</section>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="main.js"></script>
+
+
+<script>
+
+// ==========================================
+// DISPLAY CART
+// ==========================================
+
+function displayCart() {
+
+    let cartItems = document.getElementById("cart-items");
+
+    let emptyCart = document.getElementById("empty-cart");
+
+
+    // If cart is empty
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = "";
+
+        emptyCart.style.display = "block";
+
+        updateSummary();
+
+        return;
+
+    }
+
+
+    emptyCart.style.display = "none";
+
+
+    cartItems.innerHTML = "";
+
+
+    // Loop through products
+
+    cart.forEach(function(product, index) {
+
+
+        let productTotal = product.price * product.quantity;
+
+
+        cartItems.innerHTML += `
+
+            <div class="cart-item">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    class="cart-image"
+                >
+
+
+                <div class="cart-info">
+
+                    <h4>
+                        ${product.name}
+                    </h4>
+
+                    <p class="price">
+                        $${product.price}
+                    </p>
+
+
+                    <div class="quantity-box">
+
+                        <button
+                            onclick="decreaseQuantity(${index})">
+
+                            -
+
+                        </button>
+
+
+                        <span>
+                            ${product.quantity}
+                        </span>
+
+
+                        <button
+                            onclick="increaseQuantity(${index})">
+
+                            +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cart-right">
+
+                    <h5>
+                        $${productTotal}
+                    </h5>
+
+
+                    <button
+                        class="remove-btn"
+                        onclick="removeProduct(${index})">
+
+                        <i class="bi bi-trash"></i>
+
+                        Remove
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+
+    updateSummary();
+
+}
+
+
+// ==========================================
+// INCREASE QUANTITY
+// ==========================================
+
+function increaseQuantity(index) {
+
+    cart[index].quantity++;
+
+    saveCart();
+
+    displayCart();
+
+}
+
+
+// ==========================================
+// DECREASE QUANTITY
+// ==========================================
+
+function decreaseQuantity(index) {
+
+    if (cart[index].quantity > 1) {
+
+        cart[index].quantity--;
+
+    } else {
+
+        // Remove product if quantity reaches 0
+
+        cart.splice(index, 1);
+
+    }
+
+
+    saveCart();
+
+    displayCart();
+
+}
+
+
+// ==========================================
+// REMOVE PRODUCT
+// ==========================================
+
+function removeProduct(index) {
+
+    cart.splice(index, 1);
+
+    saveCart();
+
+    displayCart();
+
+}
+
+
+// ==========================================
+// UPDATE TOTAL PRICE
+// ==========================================
+
+function updateSummary() {
+
+    let subtotal = 0;
+
+
+    cart.forEach(function(product) {
+
+        subtotal += product.price * product.quantity;
+
+    });
+
+
+    document.getElementById("subtotal").innerHTML =
+        "$" + subtotal;
+
+
+    document.getElementById("total").innerHTML =
+        "$" + subtotal;
+
+}
+
+
+// ==========================================
+// CHECKOUT
+// ==========================================
+
+function checkout() {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty!");
+
+        return;
+
+    }
+
+
+    alert("Proceeding to checkout...");
+
+    // Later you can redirect to:
+    // window.location.href = "checkout.html";
+
+}
+
+function showCheckout() {
+
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    document.getElementById("checkout-menu").style.display = "block";
+
+    document.getElementById("checkout-menu").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+function showPayment(type) {
+
+    let visa = document.getElementById("visa-content");
+    let cash = document.getElementById("cash-content");
+
+    // اقفل الاتنين الأول
+    visa.style.display = "none";
+    cash.style.display = "none";
+
+    // افتح الاختيار
+    if (type === "visa") {
+        visa.style.display = "block";
+    }
+
+    if (type === "cash") {
+        cash.style.display = "block";
+    }
+}
+
+
+function confirmOrder() {
+
+    let name = document.getElementById("customer-name").value;
+    let phone = document.getElementById("customer-phone").value;
+    let address = document.getElementById("customer-address").value;
+
+    if (name === "" || phone === "" || address === "") {
+        alert("Please fill all information.");
+        return;
+    }
+
+    alert("Order Confirmed Successfully!");
+
+    localStorage.removeItem("cart");
+
+    location.reload();
+}
+
+
+// Display cart when page opens
+
+displayCart();
+
+</script>
+
+
+</body>
+
+</html>
