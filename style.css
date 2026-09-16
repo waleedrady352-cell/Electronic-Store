@@ -12,22 +12,61 @@
 }
 
 /* end section */
-/*start navbar  */
+/* Start Navbar */
+
+.navbar {
+    padding: 12px 0;
+}
+
 .navbar-brand {
     color: blue !important;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .nav-link {
-    color: black;
+    color: black !important;
+    margin: 0 8px;
     transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: blue;
-        border-bottom: 2px solid blue;
+    color: blue !important;
 }
- /* end navbar */
+
+.theme-toggle {
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.theme-toggle:hover {
+    color: blue;
+}
+
+
+/* Responsive */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .nav-link {
+        padding: 10px;
+        margin: 2px 0;
+    }
+
+    .theme-toggle {
+        display: inline-block;
+        margin: 10px 0 0 10px;
+    }
+
+}
+
+/* End Navbar */
  /* start section 2  */
 
 /* ================= PRODUCT SECTION ================= */
