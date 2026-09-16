@@ -129,42 +129,65 @@
 
   
 
-    <!-- start section 2 -->
+   <!-- start section 2 -->
 
-<section id ="product" class="product-section">
+<section id="product" class="product-section">
 
-        <div class="container">
+    <div class="container">
 
+        <!-- Section Header -->
         <div class="row align-items-center mb-5">
 
             <div class="col-lg-4">
+
                 <h2 class="products-title">
                     Featured Products
                 </h2>
+
             </div>
 
-            <div class="col-lg-8">
 
-                <div class="d-flex justify-content-lg-end flex-wrap gap-2">
+            <div class="col-lg-8 col-12">
 
-                    <button class="btn btn-outline-primary   rounded-pill">
+                <div class="d-flex justify-content-lg-end justify-content-center flex-wrap gap-2">
+
+                    <!-- All Products -->
+                    <button
+                        class="btn btn-outline-primary rounded-pill px-4 filter-btn"
+                        data-category="All">
+
                         All Products
+
                     </button>
 
-                    <button class="btn btn-outline-primary rounded-pill">
+
+                    <!-- Watches -->
+                    <button
+                        class="btn btn-outline-primary rounded-pill px-4 filter-btn"
+                        data-category="Watches">
+
                         Watches
+
                     </button>
 
-                    <button class="btn btn-outline-primary rounded-pill">
+
+                    <!-- Laptops -->
+                    <button
+                        class="btn btn-outline-primary rounded-pill px-4 filter-btn"
+                        data-category="Laptops">
+
                         Laptops
+
                     </button>
 
-                    <button class="btn btn-outline-primary rounded-pill">
+
+                    <!-- Smartphones -->
+                    <button
+                        class="btn btn-outline-primary rounded-pill px-4 filter-btn"
+                        data-category="Smartphones">
+
                         Smartphones
-                    </button>
 
-                    <button class="btn btn-outline-primary rounded-pill">
-                        Earbuds
                     </button>
 
                 </div>
@@ -174,54 +197,19 @@
         </div>
 
 
+        <!-- Products Row -->
+
         <div class="row g-4">
 
-            <!-- Product 1 -->
+
+            <!-- ========================= -->
+            <!-- Product 1 - Watch -->
+            <!-- ========================= -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="product-card h-100">
 
-                    
-                    
-                    <img
-                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXeddAuq6NDGmv7gkFLvXKF41OAewHNLIqZjYb3aFoqw&s=10"
-                        alt="Casio Watch">
-
-                
-                    <h3>
-                        Casio Watch
-                    </h3>
-
-                    
-                    <div class="mb-3">
-
-                       
-                        <span class="new-price fw-bold ms-2">
-                            $300
-                        </span>
-
-                    </div>
-
-                   
-                    <button 
-    class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
-    data-name="Casio Watch"
-    data-price="300"
-    data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXeddAuq6NDGmv7gkFLvXKF41OAewHNLIqZjYb3aFoqw&s=10">
-    ADD TO CART
-</button>
-
-                </div>
-
-            </div>
-
-
-            <!-- Product 2 -->
-            <div class="col-lg-3 col-md-6">
-
-                <div class="product-card h-100">
-
-                
                     <img
                         src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
                         alt="Smart Watch">
@@ -232,36 +220,137 @@
 
                     <div class="mb-3">
 
-                        
                         <span class="new-price fw-bold ms-2">
                             $199
                         </span>
 
                     </div>
 
-<button 
-    class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
-    data-name="Smart Watch"
-    data-price="199"
-    data-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
-    ADD TO CART
-</button>
+
+                    <button
+                        class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
+
+                        data-name="Smart Watch"
+
+                        data-price="199"
+
+                        data-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+
+                        data-category="Watches">
+
+                        ADD TO CART
+
+                    </button>
 
                 </div>
 
             </div>
 
 
-            <!-- Product 3 -->
+
+            <!-- ========================= -->
+            <!-- Product 2 - Watch -->
+            <!-- ========================= -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="product-card h-100">
 
-                   
+                    <img
+                        src="https://images.unsplash.com/photo-1524805444758-089113d48a6d"
+                        alt="Classic Watch">
+
+                    <h3>
+                        Classic Watch
+                    </h3>
+
+                    <div class="mb-3">
+
+                        <span class="new-price fw-bold ms-2">
+                            $299
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
+
+                        data-name="Classic Watch"
+
+                        data-price="299"
+
+                        data-image="https://images.unsplash.com/photo-1524805444758-089113d48a6d"
+
+                        data-category="Watches">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================= -->
+            <!-- Product 3 - Laptop -->
+            <!-- ========================= -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card h-100">
 
                     <img
-                        src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd"
-                        alt="Laptop">
+                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+                        alt="Business Laptop">
+
+                    <h3>
+                        Business Laptop
+                    </h3>
+
+                    <div class="mb-3">
+
+                        <span class="new-price fw-bold ms-2">
+                            $799
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
+
+                        data-name="Business Laptop"
+
+                        data-price="799"
+
+                        data-image="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+
+                        data-category="Laptops">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ========================= -->
+            <!-- Product 4 - Laptop -->
+            <!-- ========================= -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+                        alt="Modern Laptop">
 
                     <h3>
                         Modern Laptop
@@ -269,63 +358,124 @@
 
                     <div class="mb-3">
 
-                        
-
                         <span class="new-price fw-bold ms-2">
                             $999
                         </span>
 
                     </div>
 
-<button 
-    class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
-    data-name="Modern Laptop"
-    data-price="999"
-    data-image="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd">
-    ADD TO CART
-</button>
+
+                    <button
+                        class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
+
+                        data-name="Modern Laptop"
+
+                        data-price="999"
+
+                        data-image="https://images.unsplash.com/photo-1593642632823-8f785ba67e45"
+
+                        data-category="Laptops">
+
+                        ADD TO CART
+
+                    </button>
 
                 </div>
 
             </div>
 
 
-            <!-- Product 4 -->
+
+            <!-- ========================= -->
+            <!-- Product 5 - Smartphone -->
+            <!-- ========================= -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="product-card h-100">
 
-                    
-
                     <img
-                        src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1"
-                        alt="Earbuds">
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                        alt="Modern Smartphone">
 
                     <h3>
-                        Wireless Earbuds
+                        Modern Smartphone
                     </h3>
 
                     <div class="mb-3">
 
-                     
-
                         <span class="new-price fw-bold ms-2">
-                            $99
+                            $699
                         </span>
 
                     </div>
 
-<button 
-    class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
-    data-name="Wireless Earbuds"
-    data-price="99"
-    data-image="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1">
-    ADD TO CART
-</button>
+
+                    <button
+                        class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
+
+                        data-name="Modern Smartphone"
+
+                        data-price="699"
+
+                        data-image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+
+                        data-category="Smartphones">
+
+                        ADD TO CART
+
+                    </button>
 
                 </div>
 
             </div>
+
+
+
+            <!-- ========================= -->
+            <!-- Product 6 - Smartphone -->
+            <!-- ========================= -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1598327105666-5b89351aff97"
+                        alt="Premium Smartphone">
+
+                    <h3>
+                        Premium Smartphone
+                    </h3>
+
+                    <div class="mb-3">
+
+                        <span class="new-price fw-bold ms-2">
+                            $899
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn btn-outline-primary w-100 py-2 fw-bold add-to-cart"
+
+                        data-name="Premium Smartphone"
+
+                        data-price="899"
+
+                        data-image="https://images.unsplash.com/photo-1598327105666-5b89351aff97"
+
+                        data-category="Smartphones">
+
+                        ADD TO CART
+
+                    </button>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -333,6 +483,7 @@
 
 </section>
 
+<!-- end section 2 -->
 <!-- end section 2 -->
 
    
