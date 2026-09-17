@@ -32,19 +32,14 @@ function theme() {
 // ==========================================
 
 
-// ==========================================
-// 1️⃣ GET CART FROM LOCAL STORAGE
-// ==========================================
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
 
-// ==========================================
-// 2️⃣ ADD PRODUCT TO CART
-// ==========================================
 
-// Get all ADD TO CART buttons
+
+
 let addButtons = document.querySelectorAll(".add-to-cart");
 
 
@@ -53,25 +48,23 @@ addButtons.forEach(function(button) {
     button.addEventListener("click", function() {
 
 
-        // Get product name
+        
         let productName =
             button.getAttribute("data-name");
 
 
-        // Get product price
+       
         let productPrice =
             Number(button.getAttribute("data-price"));
 
 
-        // Get product image
+       
         let productImage =
             button.getAttribute("data-image");
 
 
 
-        // ==================================
-        // Check if product already exists
-        // ==================================
+        
 
         let existingProduct = cart.find(function(product) {
 
@@ -87,16 +80,14 @@ addButtons.forEach(function(button) {
 
         if (existingProduct) {
 
-            // Increase quantity
+            
             existingProduct.quantity++;
 
         }
 
 
 
-        // ==================================
-        // If product is new
-        // ==================================
+        
 
         else {
 
@@ -116,31 +107,23 @@ addButtons.forEach(function(button) {
 
 
 
-        // ==================================
-        // Save Cart
-        // ==================================
+        
 
         saveCart();
 
 
 
-        // ==================================
-        // Update Cart Number
-        // ==================================
+     
 
         updateCartCount();
 
 
 
-        // ==================================
-        // Change Button Text
-        // ==================================
 
         button.innerHTML = "✓ ADDED TO CART";
 
 
 
-        // Return button text
         setTimeout(function() {
 
             button.innerHTML = "ADD TO CART";
@@ -254,9 +237,6 @@ filterButtons.forEach(function(button) {
 
 
 
-            // ==================================
-            // SHOW ALL PRODUCTS
-            // ==================================
 
             if (selectedCategory === "All") {
 
@@ -267,10 +247,7 @@ filterButtons.forEach(function(button) {
 
 
 
-            // ==================================
-            // SHOW SELECTED CATEGORY
-            // ==================================
-
+           
             else if (
                 productCategory === selectedCategory
             ) {
