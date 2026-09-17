@@ -20,32 +20,65 @@
 </head>
 
 <body>
-<!-- start navbar -->
-<nav class="navbar navbar-expand-lg bg-white  position-sticky top-0 start-0 end-0 shadow-sm ">
+<!-- ================= NAVBAR ================= -->
 
-<div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-TechMart 
-</a>
-<ul class ="nav-links d-flex align-items-center  mx-auto  gap-4">
-     <li class="nav-item">
-                       <a class="nav-link active" href="../index.html">Home</a> </li>
-                   
-                    <a class="nav-link active" href="#product">products</a> </li>
-                    <a class="nav-link active" href="#">servies</a> </li>
-                  
-                    <a class="nav-link active" href="#">about</a> </li>
-</ul>
-               
-<!-- n -->
-<a class="nav-link active align-items-center mx-auto d-flex" href="#">cart</a> 
-<i class="bi bi-moon-fill theme-toggle"
-   id="theme-toggle"
-   onclick="theme()"></i>
-   <!-- n -->
-</div>
+<nav class="navbar navbar-expand-lg bg-white position-sticky top-0 shadow-sm">
+
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand"
+           href="../index.html">
+            TechMart
+        </a>
+
+
+        <!-- 3 Bars Button -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav mx-auto gap-lg-4">
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="../index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- Dark Mode -->
+            <i class="bi bi-moon-fill theme-toggle"
+               id="theme-toggle"
+               onclick="theme()">
+            </i>
+
+        </div>
+
+    </div>
+
 </nav>
-<!-- end navbar -->
+
     <!-- ================= ABOUT SECTION ================= -->
 
     <section id="about" class="about-section">
